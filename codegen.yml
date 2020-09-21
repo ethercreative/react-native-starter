@@ -4,7 +4,7 @@ schema:
       headers:
         Authorization: Bearer ${GRAPH_TOKEN}
 generates:
-  types/types.d.ts:
+  app/types/types.d.ts:
     plugins:
       - typescript
       - typescript-operations

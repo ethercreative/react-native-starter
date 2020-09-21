@@ -10,6 +10,8 @@ expo init --name Starter --template expo-template-bare-typescript;
 mv Starter/* Starter/.* .;
 rm -rf Starter;
 
+mv _App.tsx App.tsx;
+
 expo install\
   @apollo/client\
   @expo/react-native-action-sheet\
