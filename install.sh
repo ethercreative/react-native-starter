@@ -8,6 +8,7 @@ yarn global add expo;
 expo init --name Starter --template expo-template-bare-typescript;
 
 mv Starter/* Starter/.* .;
+rm -rf Starter;
 
 expo install\
   @apollo/client\
@@ -19,7 +20,7 @@ expo install\
   @react-navigation/core\
   @react-navigation/native\
   @react-navigation/native-stack\
-  @react-navication/stack\
+  @react-navigation/stack\
   apollo-cache-persist\
   dayjs\
   expo\
