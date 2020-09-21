@@ -66,3 +66,5 @@ yarn add --dev\
 cd ios && pod install;
 
 cd ../ && rm install.sh;
+
+expo start;
