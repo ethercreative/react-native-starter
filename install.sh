@@ -15,7 +15,7 @@ expo install\
   @react-native-community/async-storage\
   @react-native-community/datetimepicker\
   @react-native-community/masked-view\
-  @react-navigation/bottoms-tabs\
+  @react-navigation/bottom-tabs\
   @react-navigation/core\
   @react-navigation/native\
   @react-navigation/native-stack\
