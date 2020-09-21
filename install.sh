@@ -7,7 +7,7 @@ yarn global add expo;
 
 expo init --name Starter --template bare-typescript;
 
-mv starter/* .;
+mv Starter/* .;
 
 expo install @apollo/client\
              @expo/react-native-action-sheet\
