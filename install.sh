@@ -7,7 +7,7 @@ yarn global add expo;
 
 expo init --name Starter --template expo-template-bare-typescript;
 
-mv Starter/* .;
+mv Starter/* Starter/.* .;
 
 expo install\
   @apollo/client\
