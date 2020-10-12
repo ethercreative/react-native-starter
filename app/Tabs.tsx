@@ -3,8 +3,7 @@ import { View } from 'react-native';
 import { t } from 'react-native-tailwindcss';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTheme } from '@react-navigation/native';
-import * as Linking from 'expo-linking';
-import { ACTIVE_ICONS, COLORS, FONTS, ICONS } from './Constants';
+import { ACTIVE_ICONS, COLORS, ICONS } from './Constants';
 import { Image } from './components';
 
 import Home from './screens/Home';
