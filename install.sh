@@ -30,6 +30,7 @@ expo install\
   expo-linear-gradient\
   expo-linking\
   expo-splash-screen\
+  expo-updates\
   graphql\
   graphql-tag\
   react-native-gesture-handler\
