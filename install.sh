@@ -66,6 +66,6 @@ yarn add --dev\
   lint-staged\
   prettier;
 
-cd ../ && rm install.sh;
+rm install.sh;
 
 expo start;
