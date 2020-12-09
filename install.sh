@@ -3,8 +3,7 @@ brew install\
   optipng\
   svgo;
 
-yarn global add expo;
-yarn global upgrade expo;
+yarn global add expo-cli;
 
 expo init --name Starter --template expo-template-blank-typescript;
 
