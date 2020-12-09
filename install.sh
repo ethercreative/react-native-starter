@@ -5,7 +5,7 @@ brew install\
 
 yarn global add expo;
 
-expo init --name Starter --template expo-template-managed-typescript;
+expo init --name Starter --template blank;
 
 mv Starter/* Starter/.* .;
 rm -rf Starter;
