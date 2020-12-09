@@ -4,6 +4,7 @@ brew install\
   svgo;
 
 yarn global add expo;
+yarn global upgrade expo;
 
 expo init --name Starter --template expo-template-blank-typescript;
 
