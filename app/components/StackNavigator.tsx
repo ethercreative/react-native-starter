@@ -1,4 +1,4 @@
-import * React from 'react';
+import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useTheme } from '@react-navigation/native';
 
