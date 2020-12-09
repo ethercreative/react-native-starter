@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Image as RNImage, ImageProps } from 'react-native';
-import { t } from 'react-native-tailwindcss';
+import tailwind from 'tailwind-rn';
 
 const Image: React.FC<ImageProps> = ({
   style = [],
@@ -8,7 +8,7 @@ const Image: React.FC<ImageProps> = ({
   resizeMode = 'cover',
 }) => (
   <RNImage
-    style={[t.absolute, t.wFull, t.hFull, t.inset0, style]}
+    style={[tailwind('absolute inset-0 w-full h-full'), style]}
     source={source}
     resizeMode={resizeMode}
     fadeDuration={0}

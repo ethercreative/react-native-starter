@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import { t } from 'react-native-tailwindcss';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTheme } from '@react-navigation/native';
 import { ACTIVE_ICONS, COLORS, ICONS } from './Constants';
@@ -25,7 +24,7 @@ const TabNavigator: React.FC = () => {
           }
 
           return (
-            <View style={[{ width: 26, height: 26 }, t._mB1]}>
+            <View style={{ width: 26, height: 26, marginBottom: -4 }}>
               <Image
                 style={{ tintColor: color }}
                 source={icon}
@@ -38,7 +37,7 @@ const TabNavigator: React.FC = () => {
       tabBarOptions={{
         style: {
           backgroundColor: colors.background,
-          ...t.borderT0,
+          borderTop: 0,
         },
         labelStyle: {
           fontSize: 13,

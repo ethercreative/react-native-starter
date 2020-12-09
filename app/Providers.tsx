@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useColorScheme } from 'react-native';
-import { color, t } from 'react-native-tailwindcss';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import {
@@ -20,9 +19,9 @@ const defaultTheme: Theme = {
   dark: false,
   colors: {
     ...DefaultTheme.colors,
-    background: color.white,
-    card: color.gray200,
-    border: color.gray300,
+    background: '#fff',
+    card: '#eee',
+    border: '#ddd',
   },
 };
 
@@ -31,8 +30,8 @@ const darkTheme: Theme = {
   dark: true,
   colors: {
     ...DarkTheme.colors,
-    card: color.gray900,
-    border: color.gray800,
+    card: '#222',
+    border: '#111',
   },
 };
 
@@ -40,10 +39,10 @@ const Providers: React.FC = ({ children }) => {
   const scheme = useColorScheme();
 
   setCustomText({
-    style: [
-      t.textBase,
-      { color: scheme === 'dark' ? '#fff' : COLORS.DARK_GREY },
-    ],
+    style: {
+      fontSize: 16,
+      color: scheme === 'dark' ? '#fff' : COLORS.DARK_GREY,
+    },
     allowFontScaling: false,
   });
 
