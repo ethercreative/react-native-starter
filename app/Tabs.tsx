@@ -37,7 +37,7 @@ const TabNavigator: React.FC = () => {
       tabBarOptions={{
         style: {
           backgroundColor: colors.background,
-          borderTop: 0,
+          borderTopWidth: 0,
         },
         labelStyle: {
           fontSize: 13,
