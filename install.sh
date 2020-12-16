@@ -41,11 +41,11 @@ expo install\
   react-native-render-html\
   react-native-safe-area-context\
   react-native-screens\
+  react-native-tailwindcss\
   react-native-webview\
   react-navigation\
   react-navigation-stack\
-  sentry-expo\
-  tailwind-rn;
+  sentry-expo;
 
 yarn add --dev\
   @graphql-codegen/cli\
