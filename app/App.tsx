@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { YellowBox } from 'react-native';
+import { LogBox } from 'react-native';
 import { enableScreens } from 'react-native-screens';
 import Providers from './Providers';
 import Tabs from './Tabs';
 
 if (__DEV__) {
-  YellowBox.ignoreWarnings(['Require cycle:', 'source.uri']);
+  LogBox.ignoreLogs(['Require cycle:', 'source.uri']);
 }
 
 enableScreens();
