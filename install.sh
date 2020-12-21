@@ -1,8 +1,3 @@
-brew install\
-  jpegoptim\
-  optipng\
-  svgo;
-
 yarn global add expo-cli;
 
 expo init --name Starter --template expo-template-blank-typescript;
@@ -57,12 +52,6 @@ yarn add --dev\
   babel-preset-expo\
   eslint\
   eslint-config-universe\
-  husky\
-  imagemin\
-  imagemin-jpegoptim\
-  imagemin-optipng\
-  imagemin-svgo\
-  lint-staged\
   prettier;
 
 rm install.sh;
