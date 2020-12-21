@@ -15,7 +15,6 @@ mv _App.tsx App.tsx;
 expo install\
   @apollo/client\
   @expo/react-native-action-sheet\
-  @react-native-community/async-storage\
   @react-native-community/datetimepicker\
   @react-native-community/masked-view\
   @react-native-async-storage/async-storage\
