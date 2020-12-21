@@ -19,8 +19,8 @@ const GREY = '#f7f6fc';
 const DARK_GREY = '#202020';
 
 export const COLORS = {
-  GREY: GREY,
-  DARK_GREY: DARK_GREY,
+  GREY,
+  DARK_GREY,
   BACKGROUND: {
     GREY: { backgroundColor: GREY },
     DARK_GREY: { backgroundColor: DARK_GREY },
