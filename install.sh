@@ -37,8 +37,6 @@ expo install\
   react-native-screens\
   react-native-tailwindcss\
   react-native-webview\
-  react-navigation\
-  react-navigation-stack\
   sentry-expo;
 
 yarn add --dev\
