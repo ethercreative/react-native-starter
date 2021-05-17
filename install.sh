@@ -25,7 +25,7 @@ expo install\
   expo-constants\
   expo-linear-gradient\
   expo-linking\
-  expo-secure-storage\
+  expo-secure-store\
   expo-splash-screen\
   expo-updates\
   graphql\
