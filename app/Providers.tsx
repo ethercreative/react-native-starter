@@ -45,7 +45,6 @@ const Providers: React.FC = ({ children }) => {
 
   setCustomText({
     style: {
-      fontFamily: 'Aventa-Regular',
       fontSize: 16,
       color: scheme === 'dark' ? darkTheme.colors.text : lightTheme.colors.text,
     },
