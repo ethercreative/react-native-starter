@@ -10,11 +10,16 @@ import {
 } from '@react-navigation/native';
 
 import { ActionSheetProvider } from '@expo/react-native-action-sheet';
-import { setCustomText } from 'react-native-global-props';
-import ClientProvider from './Client';
-import { COLORS } from './Constants';
 
-const defaultTheme: Theme = {
+import {
+  setCustomText,
+  setCustomTouchableOpacity,
+} from 'react-native-global-props';
+
+import { AuthProvider, useAuth, UserProvider } from './contexts';
+import ClientProvider from './Client';
+
+const lightTheme: Theme = {
   ...DefaultTheme,
   dark: false,
   colors: {
@@ -40,21 +45,40 @@ const Providers: React.FC = ({ children }) => {
 
   setCustomText({
     style: {
+      fontFamily: 'Aventa-Regular',
       fontSize: 16,
-      color: scheme === 'dark' ? '#fff' : COLORS.DARK_GREY,
+      color: scheme === 'dark' ? darkTheme.colors.text : lightTheme.colors.text,
     },
     allowFontScaling: false,
   });
 
+  setCustomTouchableOpacity({
+    activeOpacity: 0.8,
+  });
+
   return (
     <SafeAreaProvider>
-      <NavigationContainer theme={scheme === 'dark' ? darkTheme : defaultTheme}>
+      <NavigationContainer theme={scheme === 'dark' ? darkTheme : lightTheme}>
         <ActionSheetProvider>
-          <ClientProvider>{children}</ClientProvider>
+          <AuthProvider>
+            <ClientProvider>
+              <UserSwitch>{children}</UserSwitch>
+            </ClientProvider>
+          </AuthProvider>
         </ActionSheetProvider>
       </NavigationContainer>
     </SafeAreaProvider>
   );
+};
+
+const UserSwitch: React.FC = ({ children }) => {
+  const { jwt } = useAuth();
+
+  if (jwt) {
+    return <UserProvider>{children}</UserProvider>;
+  }
+
+  return <>{children}</>;
 };
 
 export default Providers;

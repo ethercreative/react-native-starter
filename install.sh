@@ -6,6 +6,8 @@ mv Starter/* Starter/.* .;
 rm -rf Starter;
 
 mv _App.tsx App.tsx;
+mv assets/* app/assets;
+rm -rf assets;
 
 expo install\
   @apollo/client\
@@ -16,21 +18,20 @@ expo install\
   @react-navigation/bottom-tabs\
   @react-navigation/core\
   @react-navigation/native\
-  @react-navigation/native-stack\
   @react-navigation/stack\
-  apollo-cache-persist\
+  apollo3-cache-persist\
   dayjs\
   expo\
   expo-constants\
   expo-linear-gradient\
   expo-linking\
+  expo-secure-storage\
   expo-splash-screen\
   expo-updates\
   graphql\
   graphql-tag\
   react-native-gesture-handler\
   react-native-global-props\
-  react-native-iphone-x-helper\
   react-native-reanimated\
   react-native-render-html\
   react-native-safe-area-context\
@@ -51,6 +52,10 @@ yarn add --dev\
   eslint\
   eslint-config-universe\
   prettier;
+
+yarn remove\
+  react-dom\
+  react-native-web;
 
 rm install.sh;
 

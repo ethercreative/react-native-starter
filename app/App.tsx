@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { LogBox } from 'react-native';
-import { enableScreens } from 'react-native-screens';
+import * as SplashScreen from 'expo-splash-screen';
+import { sleep } from './helpers';
 import Providers from './Providers';
 import Tabs from './Tabs';
 
@@ -8,12 +9,26 @@ if (__DEV__) {
   LogBox.ignoreLogs(['Require cycle:', 'source.uri']);
 }
 
-enableScreens();
+try {
+  SplashScreen.preventAutoHideAsync();
+} catch {}
 
-const App: React.FC = () => (
-  <Providers>
-    <Tabs />
-  </Providers>
-);
+const App: React.FC = () => {
+  React.useEffect(() => {
+    (async () => {
+      await sleep(100);
+
+      try {
+        SplashScreen.hideAsync();
+      } catch {}
+    })();
+  }, []);
+
+  return (
+    <Providers>
+      <Tabs />
+    </Providers>
+  );
+};
 
 export default App;
