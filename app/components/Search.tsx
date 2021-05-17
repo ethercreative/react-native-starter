@@ -2,7 +2,7 @@ import * as React from 'react';
 import { TextInput, View } from 'react-native';
 import { t } from 'react-native-tailwindcss';
 import { useTheme } from '@react-navigation/native';
-import { COLORS, FONTS } from '../Constants';
+import { COLORS } from '../Constants';
 import { Image } from '../components';
 
 export type Fields = {
@@ -26,8 +26,8 @@ const Search: React.FC<Props> = ({ state, autoFocus, onChange }) => {
             { backgroundColor: dark ? colors.card : COLORS.GREY },
             t.h12,
             t.roundedLg,
-            FONTS.MEDIUM,
             t.textLg,
+            t.fontMedium,
             { color: colors.text },
             t.pL12,
             t.pR4,
@@ -68,4 +68,3 @@ const Search: React.FC<Props> = ({ state, autoFocus, onChange }) => {
 };
 
 export default Search;
-]
