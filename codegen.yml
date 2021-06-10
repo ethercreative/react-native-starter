@@ -12,6 +12,7 @@ generates:
       avoidOptionals: true
       enumsAsTypes: true
       exportFragmentSpreadSubTypes: true
+      maybeValue: T
       noExport: true
 hooks:
   afterAllFileWrite:
