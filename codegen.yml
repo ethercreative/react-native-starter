@@ -9,7 +9,6 @@ generates:
       - typescript
       - typescript-operations
     config:
-      avoidOptionals: true
       enumsAsTypes: true
       exportFragmentSpreadSubTypes: true
       maybeValue: T
