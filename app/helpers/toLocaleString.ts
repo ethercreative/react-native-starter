@@ -10,16 +10,13 @@ export const toLocaleString = (
   }
 
   if (IS_ANDROID) {
-    return value
-      .toFixed(decimals)
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-      .replace('.00', '');
+    value = value.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  } else {
+    value = value.toLocaleString('en-GB', {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
   }
-
-  value = value.toLocaleString('en-GB', {
-    minimumFractionDigits: decimals,
-    maximumFractionDigits: decimals,
-  });
 
   if (!withZeroes) {
     value = value.replace('.00', '');
