@@ -19,7 +19,7 @@ export const toLocaleString = (
   }
 
   if (!withZeroes) {
-    value = value.replace('.00', '');
+    value = value.replace('.'.padEnd(decimals + 1, '0'), '');
   }
 
   return value;
